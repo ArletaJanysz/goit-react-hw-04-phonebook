@@ -9,7 +9,7 @@ export function App() {
   const [contacts, setContacts] = useState([]);
   const [filter, setFilter] = useState('');
 
-  // Odczytaj kontakty z localStorage przy załadowaniu komponentu
+  
   useEffect(() => {
     const storedContacts = localStorage.getItem('contacts');
     if (storedContacts) {
@@ -17,7 +17,7 @@ export function App() {
     }
   }, []);
 
-  // Zapisz kontakty w localStorage po każdej zmianie w stanie contacts
+  
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
